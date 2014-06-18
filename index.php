@@ -9,6 +9,7 @@
 	<script src="js/jquery.main.js"></script>
     <script src="js/moment.min.js"></script>
     <script src="js/app.js"></script>
+    <script src="http://cdn-files.deezer.com/js/min/dz.js"></script>
 	<!--[if IE]><script src="js/ie.js"></script><![endif]-->
 </head>
 <body>

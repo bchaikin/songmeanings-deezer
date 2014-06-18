@@ -414,6 +414,10 @@ $(document).ready(function(){
     });
 
 
+});
+
+DZ.ready(function(){
+    alert("SDK Init");
 })
 
 
