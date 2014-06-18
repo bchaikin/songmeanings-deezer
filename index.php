@@ -7,6 +7,8 @@
 	<link media="all" rel="stylesheet" href="css/all.css">
 	<script src="js/jquery-1.8.3.min.js"></script>
 	<script src="js/jquery.main.js"></script>
+    <script src="js/moment.min.js"></script>
+    <script src="js/app.js"></script>
 	<!--[if IE]><script src="js/ie.js"></script><![endif]-->
 </head>
 <body>
@@ -43,31 +45,20 @@
 					<div class="album-info">
 						<dl>
 							<dt>Artist:</dt>
-							<dd><a class="title" href="#">Incubus</a></dd>
+							<dd id="sm_artist"><a class="title" href="#">N/A</a></dd>
 							<dt>Song:</dt>
-							<dd>Anna Molly</dd>
+							<dd id="sm_song">N/A</dd>
 							<dt>Album:</dt>
-							<dd>Light Grenades</dd>
+							<dd id="sm_album">N/A</dd>
 						</dl>
 					</div>
 					<div class="follow-block">
 						<a href="#" class="link-follow">Follow <span>Following</span></a>
 					</div>
 				</div>
-				<aside class="info-list col">
-					<p>
-						A cloud hangs over this city by the sea. <br>
-						I watch the ships pass and wonder if she might be out there and sober as well from loneliness. <br>
-						Please do persist, girl it's time we met and made a mess.
-					</p>
-					<div class="text-block hidden-tablet">
-						<p>
-							I picture your face at the back of my eyes. <br>
-							A fire in the attic, proof of the prize! <br>
-							<span class="hidden-mobile">Anna-Molly, Anna-Molly, Anna-Molly.</span>
-						</p>
-					</div>
-					<div class="link-holder"><a href="#">View Full Lyrics</a></div>
+				<aside id="sm_lyrics" class="info-list col">
+
+
 				</aside>
 			</section>
 			<div id="content">
@@ -75,156 +66,79 @@
 					<div class="meta-frame">
 						<div class="meta-holder">
 							<a href="#" class="btn-add">Add Your Thoughts</a>
-							<strong class="title">138 Comments</strong>
+							<strong class="title" id="sm_comment_count">0 Comments</strong>
 							<div class="filter">
 								<a class="filter-opener" href="#">Filter <span>by Category</span></a>
 							</div>
 							<div class="sort">
 								<a href="#" class="sort-opener">Sort</a>
 								<ul>
-									<li><a href="#">Highest Rated</a></li>
-									<li><a href="#">Oldest First</a></li>
-									<li class="active"><a href="#">Newest First</a></li>
+									<li class="sm_comment_highest"><a href="#" >Highest Rated</a></li>
+									<li class="sm_comment_oldest"><a href="#" >Oldest First</a></li>
+									<li class="active sm_comment_newest"><a href="#">Newest First</a></li>
 								</ul>
 							</div>
 						</div>
 						<div class="slide-holder">
 							<div class="slide-filter">
 								<ul>
-								<li><a href="#">General Comment</a></li>
-								<li><a href="#">Favorite</a></li>
-								<li><a href="#">Memory</a></li>
-								<li><a href="#">Interpretation</a></li>
-								<li><a href="#">Song Meaning</a></li>
-								<li><a href="#">My Opinion</a></li>
-								<li><a href="#">Translation</a></li>
-								<li><a href="#">Link(s)</a></li>
-								<li class="last"><a href="#">Song Comparison</a></li>
+								<li class="sm_comment_general"><a href="#">General Comment</a></li>
+								<li class="sm_comment_favorite"><a href="#">Favorite</a></li>
+								<li class="sm_comment_memory"><a href="#">Memory</a></li>
+								<li class="sm_comment_interpretation"><a href="#">Interpretation</a></li>
+								<li class="sm_comment_meaning"><a href="#">Song Meaning</a></li>
+								<li class="sm_comment_opinion"><a href="#">My Opinion</a></li>
+								<li class="sm_comment_translation"><a href="#">Translation</a></li>
+								<li class="sm_comment_links"><a href="#">Link(s)</a></li>
+								<li class="sm_comment_comparison last"><a href="#">Song Comparison</a></li>
 							</ul>
 							<div class="slide-nav-mobile">
 								<ul>
-									<li><a href="#">General Comment</a></li>
-									<li><a href="#">Favorite</a></li>
-									<li><a href="#">Memory</a></li>
-									<li><a href="#">Interpretation</a></li>
-									<li><a href="#">Song Meaning</a></li>
+									<li class="sm_comment_general"><a href="#">General Comment</a></li>
+									<li class="sm_comment_favorite"><a href="#">Favorite</a></li>
+									<li class="sm_comment_memory"><a href="#">Memory</a></li>
+									<li class="sm_comment_interpretation"><a href="#">Interpretation</a></li>
+									<li class="sm_comment_meaning"><a href="#">Song Meaning</a></li>
 								</ul>
 								<ul>
-									<li><a href="#">My Opinion</a></li>
-									<li><a href="#">Translation</a></li>
-									<li><a href="#">Link(s)</a></li>
-									<li class="last"><a href="#">Song Comparison</a></li>
+									<li class="sm_comment_opinion"><a href="#">My Opinion</a></li>
+									<li class="sm_comment_translation"><a href="#">Translation</a></li>
+									<li class="sm_comment_links"><a href="#">Link(s)</a></li>
+									<li class="sm_comment_comparison last"><a href="#">Song Comparison</a></li>
 								</ul>
 							</div>
 							<div class="slide-nav-tablet">
 								<ul>
-									<li><a href="#">General Comment</a></li>
-									<li><a href="#">Favorite</a></li>
-									<li><a href="#">Memory</a></li>
+									<li class="sm_comment_general"><a href="#">General Comment</a></li>
+									<li class="sm_comment_favorite"><a href="#">Favorite</a></li>
+									<li class="sm_comment_memory"><a href="#">Memory</a></li>
 								</ul>
 								<ul>
-									<li><a href="#">Interpretation</a></li>
-									<li><a href="#">Song Meaning</a></li>
-									<li><a href="#">My Opinion</a></li>
+									<li class="sm_comment_interpretation"><a href="#">Interpretation</a></li>
+									<li class="sm_comment_meaning"><a href="#">Song Meaning</a></li>
+									<li class="sm_comment_opinion"><a href="#">My Opinion</a></li>
 								</ul>
 								<ul>
-									<li><a href="#">Translation</a></li>
-									<li><a href="#">Link(s)</a></li>
-									<li class="last"><a href="#">Song Comparison</a></li>
+									<li class="sm_comment_translation"><a href="#">Translation</a></li>
+									<li class="sm_comment_links"><a href="#">Link(s)</a></li>
+									<li class="sm_comment_comparison last"><a href="#">Song Comparison</a></li>
 								</ul>
 							</div>
 							</div>
 							<div class="slide-sort">
 								<ul>
-									<li><a href="#">Highest Rated</a></li>
-									<li><a href="#">Oldest First</a></li>
-									<li class="active"><a href="#">Newest First</a></li>
+									<li class="sm_comment_highest"><a href="#">Highest Rated</a></li>
+									<li class="sm_comment_oldest"><a href="#">Oldest First</a></li>
+									<li class="sm_comment_newest active "><a href="#">Newest First</a></li>
 								</ul>
 							</div>
 						</div>
 					</div>
 				</footer>
 				<div class="scrollable-area comments-area">
-					<div class="comments-list">
-						<article class="comments-item">
-							<div class="add-info">
-								<footer>
-									<strong class="title"><a href="#">postrchildon</a></strong>
-									<time class="date" datetime="2013-02-28">February 28, 2013</time>
-									<div class="links">
-										<a href="#">37 Replies</a> <span class="leave-reply">| <a href="#">Leave Your Reply</a></span>
-									</div>
-								</footer>
-								<div class="sub-title">
-									<span>General Comment:</span>
-									<a href="#" class="link-flag">flag</a>
-								</div>
-								<p>I feel this song is about a girl he perhaps feels connected with, by an umbilical cord that is invicible. Sort of like a <span class="hidden-mobile">soul mate/twin flame. Given that he's a Pisces and if you were to do <span class="hidden-tablet"> research on the Piscean sign and the Virgoian, you may find some more answers biblical but also stemming from</span></span>..... <a href="#">Expand Comment</a></p>
-							</div>
-							<div class="rating-holder">
-								<strong class="title"><span>Comment </span>Rating</strong>
-								<div class="count">+27</div>
-								<nav class="action">
-									<ul>
-										<li class="minus"><a href="#">-</a></li>
-										<li><a href="#">+</a></li>
-									</ul>
-								</nav>
-							</div>
-						</article>
-						<article class="comments-item">
-							<div class="add-info">
-								<footer>
-									<strong class="title"><a href="#">Seerealityon</a></strong>
-									<time class="date" datetime="2013-01-31">January 31, 2013</time>
-									<div class="links">
-										<span>No Replies</span> <span class="leave-reply">| <a href="#">Leave Your Reply</a></span>
-									</div>
-								</footer>
-								<div class="sub-title">
-									<span>My Interpretation:</span>
-									<a href="#" class="link-flag">flag</a>
-								</div>
-								<p>Ok, Want2Lrn has it right, at least I think.</p>
-								<p>Anna Molly is not <span class="hidden-mobile">talking about a person... think <span class="hidden-tablet"> about the way its sung. Its really meant to</span></span>..... <a href="#">Expand Comment</a></p>
-							</div>
-							<div class="rating-holder">
-								<strong class="title"><span>Comment </span>Rating</strong>
-								<div class="count">+3</div>
-								<nav class="action">
-									<ul>
-										<li class="minus"><a href="#">-</a></li>
-										<li><a href="#">+</a></li>
-									</ul>
-								</nav>
-							</div>
-						</article>
-						<article class="comments-item">
-							<div class="add-info">
-								<footer>
-									<strong class="title"><a href="#">Want2Lrn</a></strong>
-									<time class="date" datetime="2012-09-20">September 20, 2012</time>
-									<div class="links">
-										<a href="#">5 Replies</a> <span class="leave-reply">| <a href="#">Leave Your Reply</a></span>
-									</div>
-								</footer>
-								<div class="sub-title">
-									<span>General Comment:</span>
-									<a href="#" class="link-flag">flag</a>
-								</div>
-								<p>How come I end up where I started (How come I will die just as I was dead before I was born) How come I end <span class="hidden-mobile">up where I belong (How come I am alive now) Won't take my eyes off the ball again (I will try a realise what life is about and get away from the systems of society) You reel me out then</span>..... <a href="#">Expand Comment</a></p>
-							</div>
-							<div class="rating-holder">
-								<strong class="title"><span>Comment </span>Rating</strong>
-								<div class="count">+11</div>
-								<nav class="action">
-									<ul>
-										<li class="minus"><a href="#">-</a></li>
-										<li><a href="#">+</a></li>
-									</ul>
-								</nav>
-							</div>
-						</article>
+                    <div class="comments-list" id="sm_comments">
+
+
 					</div>
 				</div>
 			</div>
