@@ -9,7 +9,7 @@
 	<script src="js/jquery.main.js"></script>
     <script src="js/moment.min.js"></script>
     <script src="js/app.js"></script>
-    <script src="http://cdn-files.deezer.com/js/min/dz.js"></script>
+    <script type="text/javascript" src="http://cdn-files.deezer.com/js/min/dz.js"></script>
 	<!--[if IE]><script src="js/ie.js"></script><![endif]-->
 </head>
 <body>
@@ -30,11 +30,11 @@
 			<section class="album-intro">
 				<div class="image-holder col">
 					<span data-picture data-alt="image description">
-						<span data-src="images/img1.jpg" ></span>
-						<span data-src="images/img1-tablet.jpg" data-media="(max-width:1024px)" ></span>
-						<span data-src="images/img1-tablet2x.jpg" data-media="(max-width:1024px) and (-webkit-min-device-pixel-ratio:1.5), (max-width:1024px) and (min-resolution:144dpi)" ></span>
-						<span data-src="images/img1-mobile.jpg" data-media="(max-width:767px)" ></span>
-						<span data-src="images/img1-mobile2x.jpg" data-media="(max-width:767px) and (-webkit-min-device-pixel-ratio:1.5), (max-width:767px) and (min-resolution:144dpi)" ></span>
+						<span data-src="images/no-album.png" ></span>
+						<span data-src="images/no-album.png" data-media="(max-width:1024px)" ></span>
+						<span data-src="images/no-album.png" data-media="(max-width:1024px) and (-webkit-min-device-pixel-ratio:1.5), (max-width:1024px) and (min-resolution:144dpi)" ></span>
+						<span data-src="images/no-album.png" data-media="(max-width:767px)" ></span>
+						<span data-src="images/no-album.png" data-media="(max-width:767px) and (-webkit-min-device-pixel-ratio:1.5), (max-width:767px) and (min-resolution:144dpi)" ></span>
 						<!--[if (lt IE 9) & (!IEMobile)]>
 							<span data-src="images/img1.jpg"></span>
 						<![endif]-->
@@ -161,5 +161,38 @@
 			</div>
 		</footer>
 	</div>
+
+<script>
+
+    $(document).ready(function(){
+        DZ.init({
+            appId  : '137783',
+            channelUrl : 'http://deezer.songmeanings.com/',
+            player : {
+                onload : function() {
+                    //console.log("DZ.init player.onload", arguments);
+                    // Callback function is called when the currently playing track has changed
+                    DZ.Event.subscribe('current_track', function(track, evt_name){
+                        console.log("Currently playing track", track["track"]);
+
+                        sm_init(track["track"]["artist"]["name"],track["track"]["title"],track["track"]["album"]["title"]);
+                    });
+                }
+            }
+        });
+
+        DZ.ready(function() {
+            trackobj = arguments[0]["player"]["current_track"];
+            console.log("DZ.ready");
+            console.log(arguments);
+            sm_init(trackobj["artist"]["name"],trackobj["title"],trackobj["album"]["title"]);
+        });
+
+
+
+    });
+</script>
+
+
 </body>
 </html>

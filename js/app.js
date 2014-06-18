@@ -1,7 +1,7 @@
 
-var artist = "Radiohead";
-var song = "Karma Police";
-var album = "OK Computer";
+var artist = "";
+var song = "";
+var album = "";
 var lyric_id = 0;
 var page_count = 10;
 var page_current = 1;
@@ -11,16 +11,24 @@ var comment_order = "date";
 var comment_type = "all"
 
 
-$(document).ready(function() {
 
-    init();
 
-});
 
-function init(){
+
+
+
+function sm_init(dzartist, dzsong, dzalbum){
+
+    artist = dzartist;
+    song = dzsong;
+    album = dzalbum;
+
+
     $("#sm_artist").html(artist);
     $("#sm_song").html(song);
     $("#sm_album").html(album);
+
+    
     queryForLyrics();
 
 
@@ -117,7 +125,7 @@ function queryForLyrics() {
 
 
 
-    var url = "https://api.songmeanings.com/1/?key=bk9HMIsveyMZZyNROxxf&method=lyrics.get&artist_name=" + getEncodedValue(artist) + "&lyric_title=" + getEncodedValue(song) + "&format=xml&referrer=deezer";
+    var url = "https://api.songmeanings.com/1/?key=bk9HMIsveyMZZyNROxxf&method=lyrics.get&artist_name=" + encodeURIComponent(artist) + "&lyric_title=" + encodeURIComponent(song) + "&format=xml&referrer=deezer";
 
     executeRequestForXml(url, function (xml) {
 
@@ -416,9 +424,7 @@ $(document).ready(function(){
 
 });
 
-DZ.ready(function(){
-    alert("SDK Init");
-})
+
 
 
 
