@@ -64,7 +64,8 @@ function executeRequestForXml(url, callback, errorCallback) {
                             break;
                         default:
                         {
-                            errorCallback(status);
+                            console.log("Error status:" + status);
+                            $("#spinner").fadeOut();
                         }
                             break;
                     }
@@ -119,11 +120,23 @@ function getValueFromXmlNode(xml, node) {
     return '';
 }
 
+function clearAll(){
+
+    var selectedTypeCount = 10;
+
+
+    $("#sm_lyrics").html("");
+    $("#sm_comment_count").text("");
+    $('#pagination').html('');
+    $('#sm_comments').html('');
+
+    }
 
 // LYRICS
 function queryForLyrics() {
 
-
+    clearAll();
+    $("#spinner").fadeIn();
 
     var url = "https://api.songmeanings.com/1/?key=bk9HMIsveyMZZyNROxxf&method=lyrics.get&artist_name=" + encodeURIComponent(artist) + "&lyric_title=" + encodeURIComponent(song) + "&format=xml&referrer=deezer";
 
@@ -211,6 +224,7 @@ function queryForCommentsAndUpdateUI(sort, order) {
             var commentRating = parseInt(getValueFromXmlNode(comment, "comment_rating"));
             var commentReplies =  parseInt(getValueFromXmlNode(comment, "comment_replies"))
             var commentBody = getValueFromXmlNode(comment, "comment_body");
+            var commentType = getValueFromXmlNode(comment, "comment_type");
 
             if (commentRating > 0) {
                 commentRating = '+' + commentRating;
@@ -242,7 +256,7 @@ function queryForCommentsAndUpdateUI(sort, order) {
                     </div> \
                     </footer> \
                         <div class=\"sub-title\"> \
-                            <span>General Comment:</span> \
+                            <span>" + commentType + ":</span> \
                             <a href=\"#\" class=\"link-flag\">flag</a> \
                             </div> \
                                 <p>"+short_comment+"<span id=\"ce-"+commentId+"\">... <a href=\"#\" id=\"trigger-"+commentId+"\">Expand Comment</a></span><span style=\"display:none\" id=\"ch-"+commentId+"\">"+comment_end+"</span></p> \
@@ -295,6 +309,7 @@ $('#trigger-"+ commentId +"').click(function(e){\
 
 
             $('#sm_comments').append(commentHtml);
+            $("#spinner").fadeOut();
         }
     });
 }
@@ -341,6 +356,7 @@ $(document).ready(function(){
 
     $(".sm_comment_oldest a").click(function(e){
         e.preventDefault();
+        $("#spinner").fadeIn();
         $(".sm_comment_oldest").addClass("active");
         $(".sm_comment_newest").removeClass("active");
         $(".sm_comment_highest").removeClass("active");
@@ -353,6 +369,7 @@ $(document).ready(function(){
 
     $(".sm_comment_newest a").click(function(e){
         e.preventDefault();
+        $("#spinner").fadeIn();
         $(".sm_comment_oldest").removeClass("active");
         $(".sm_comment_newest").addClass("active");
         $(".sm_comment_highest").removeClass("active");
@@ -364,11 +381,12 @@ $(document).ready(function(){
 
     $(".sm_comment_highest a").click(function(e){
         e.preventDefault();
+        $("#spinner").fadeIn();
         $(".sm_comment_oldest").removeClass("active");
         $(".sm_comment_newest").removeClass("active");
         $(".sm_comment_highest").addClass("active");
         comment_sort = "rating";
-        comment_order = "asc"
+        comment_order = "desc"
         queryForCommentsAndUpdateUI(comment_sort, comment_order);
 
     });
@@ -378,49 +396,68 @@ $(document).ready(function(){
     // Comment Filtering
     $(".sm_comment_general a").click(function(e){
         comment_type = 4;
+        $("#spinner").fadeIn();
         queryForCommentsAndUpdateUI(comment_sort, comment_order);
     });
 
     $(".sm_comment_favorite a").click(function(e){
         comment_type = 5;
+        $("#spinner").fadeIn();
         queryForCommentsAndUpdateUI(comment_sort, comment_order);
     });
 
     $(".sm_comment_memory a").click(function(e){
         comment_type = 5;
+        $("#spinner").fadeIn();
         queryForCommentsAndUpdateUI(comment_sort, comment_order);
     });
 
     $(".sm_comment_interpretation a").click(function(e){
         comment_type = 6;
+        $("#spinner").fadeIn();
         queryForCommentsAndUpdateUI(comment_sort, comment_order);
     });
 
     $(".sm_comment_meaning a").click(function(e){
         comment_type = 7;
+        $("#spinner").fadeIn();
         queryForCommentsAndUpdateUI(comment_sort, comment_order);
     });
 
     $(".sm_comment_opinion a").click(function(e){
         comment_type = 8;
+        $("#spinner").fadeIn();
         queryForCommentsAndUpdateUI(comment_sort, comment_order);
     });
 
     $(".sm_comment_translation a").click(function(e){
         comment_type = 8;
+        $("#spinner").fadeIn();
         queryForCommentsAndUpdateUI(comment_sort, comment_order);
     });
 
     $(".sm_comment_links a").click(function(e){
         comment_type = 13;
+        $("#spinner").fadeIn();
         queryForCommentsAndUpdateUI(comment_sort, comment_order);
     });
 
     $(".sm_comment_comparison a").click(function(e){
         comment_type = 14;
+        $("#spinner").fadeIn();
         queryForCommentsAndUpdateUI(comment_sort, comment_order);
     });
 
+
+    //Add comments
+    $("#sm_add_comment").click(function(e){
+        e.preventDefault();
+        console.log("Add thoughts clicked");
+        if($(".slide-thoughts").is(":visible"))
+            $(".slide-thoughts").fadeOut();
+        else
+            $(".slide-thoughts").fadeIn();
+    });
 
 });
 

@@ -1,0 +1,11 @@
+.facebook{filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5870ac', endColorstr='#3b579d',GradientType=0 );}
+.facebook.error{
+	background:#b1bcd8;
+	filter:none;
+}
+.google.error{
+	background:#f1b7b0;
+	filter:none;
+}
+.google{filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e26657', endColorstr='#dd4b39',GradientType=0 );}
+.login-form input[type="submit"]{filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ed9539', endColorstr='#ea8216',GradientType=0 );}
