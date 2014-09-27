@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="gumo">
+  <component name="PublishConfigData" serverName="deezer.songmeaning.com">
     <serverData>
-      <paths name="gumo">
+      <paths name="deezer.songmeaning.com">
         <serverdata>
           <mappings>
             <mapping deploy="/" local="$PROJECT_DIR$" web="/" />

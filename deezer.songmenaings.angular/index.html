@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html ng-app="songmeanings">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>SongMeanings.net</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/truncate.js"></script>
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<link media="all" rel="stylesheet" href="css/all.css">
+
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<script src="js/jquery.main.js"></script>
+	<!--[if IE]><script src="js/ie.js"></script><![endif]-->
+
+</head>
+<body ng-controller="DeezerController as deezer">
+
+
+
+	<div id="wrapper">
+		<header id="header">
+			<div class="header-holder">
+				<strong class="logo"><a href="#">SongMeanings.net</a></strong>
+				<div class="account">
+					<a href="#" class="opener">account</a>
+					<ul>
+						<li><a href="#">Sign Up</a></li>
+						<li class="signin" ><a ng-click='toggleModal()'>Login</a></li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<main id="main" role="main">
+			<section class="album-intro">
+				<div class="image-holder col">
+					<span data-picture data-alt="image description">
+						<span data-src="images/no-album.png" ></span>
+						<span data-src="images/no-album.png" data-media="(max-width:1024px)" ></span>
+						<span data-src="images/no-album.png" data-media="(max-width:1024px) and (-webkit-min-device-pixel-ratio:1.5), (max-width:1024px) and (min-resolution:144dpi)" ></span>
+						<span data-src="images/no-album.png" data-media="(max-width:767px)" ></span>
+						<span data-src="images/no-album.png" data-media="(max-width:767px) and (-webkit-min-device-pixel-ratio:1.5), (max-width:767px) and (min-resolution:144dpi)" ></span>
+						<!--[if (lt IE 9) & (!IEMobile)]>
+							<span data-src="images/no-album.png"></span>
+						<![endif]-->
+						<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+						<noscript><img src="images/no-album.png" width="200" height="200" alt="image description" ></noscript>
+					</span>
+				</div>
+				<div class="info-holder col">
+					<div class="album-info">
+						<dl>
+							<dt>Artist:</dt>
+							<dd><a href="{{deezer.song.artistUrl}}" target="_blank">{{deezer.song.artist}}</a></dd>
+							<dt>Song:</dt>
+							<dd>{{deezer.song.title}}</dd>
+							<dt>Album:</dt>
+							<dd>{{deezer.song.album}}</dd>
+						</dl>
+					</div>
+					<div class="follow-block">
+						<a href="#" class="link-follow">Follow <span>Following</span></a>
+					</div>
+				</div>
+				<aside class="info-list col">
+					<p>{{deezer.song.snippet}}</p>
+
+					<div class="link-holder"><a href="{{deezer.song.snippetUrl}}" target="_blank">View Full Lyrics</a></div>
+				</aside>
+			</section>
+			<div id="content">
+				<footer class="meta-block">
+					<div class="meta-frame">
+						<div class="meta-frame2">
+							<div class="meta-holder">
+								<a href="#" class="btn-add thoughts-opener">Add Your Thoughts</a>
+								<strong class="title">{{deezer.song.numComments}} Comments</strong>
+								<div class="filter">
+									<a class="filter-opener" href="#">Filter <span>by Category</span></a>
+								</div>
+								<div class="sort">
+									<a href="#" class="sort-opener">Sort</a>
+									<ul>
+										<li class="{{deezer.ratingActive}}"><a ng-click="deezer.updateSort('rating')">Highest Rated</a></li>
+										<li class="{{deezer.ascActive}}"><a ng-click="deezer.updateSort('asc')">Oldest First</a></li>
+										<li class="{{deezer.descActive}}"><a ng-click="deezer.updateSort('desc')">Newest First</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="slide-holder">
+								<div class="slide-filter">
+									<ul>
+									<li><a ng-click="deezer.updateCategory(4)">General Comment</a></li>
+									<li><a ng-click="deezer.updateCategory(5)">Favorite</a></li>
+									<li><a ng-click="deezer.updateCategory(5)">Memory</a></li>
+									<li><a ng-click="deezer.updateCategory(6)">Interpretation</a></li>
+									<li><a ng-click="deezer.updateCategory(7)">Song Meaning</a></li>
+									<li><a ng-click="deezer.updateCategory(8)">My Opinion</a></li>
+									<li><a ng-click="deezer.updateCategory(9)">Translation</a></li>
+									<li><a ng-click="deezer.updateCategory(13)">Link(s)</a></li>
+									<li class="last"><a ng-click="deezer.updateCategory(14)">Song Comparison</a></li>
+								</ul>
+								<div class="slide-nav-mobile">
+									<ul>
+										<li><a ng-click="deezer.updateCategory(4)">General Comment</a></li>
+										<li><a ng-click="deezer.updateCategory(5)">Favorite</a></li>
+										<li><a ng-click="deezer.updateCategory(5)">Memory</a></li>
+										<li><a ng-click="deezer.updateCategory(6)">Interpretation</a></li>
+										<li><a ng-click="deezer.updateCategory(7)">Song Meaning</a></li>
+									</ul>
+									<ul>
+										<li><a ng-click="deezer.updateCategory(8)">My Opinion</a></li>
+										<li><a ng-click="deezer.updateCategory(9)">Translation</a></li>
+										<li><a ng-click="deezer.updateCategory(13)">Link(s)</a></li>
+										<li class="last"><a ng-click="deezer.updateCategory(14)">Song Comparison</a></li>
+									</ul>
+								</div>
+								<div class="slide-nav-tablet">
+									<ul>
+										<li><a ng-click="deezer.updateCategory(4)">General Comment</a></li>
+										<li><a ng-click="deezer.updateCategory(5)">Favorite</a></li>
+										<li><a ng-click="deezer.updateCategory(5)">Memory</a></li>
+									</ul>
+									<ul>
+										<li><a ng-click="deezer.updateCategory(6)">Interpretation</a></li>
+										<li><a ng-click="deezer.updateCategory(7)">Song Meaning</a></li>
+										<li><a ng-click="deezer.updateCategory(8)">My Opinion</a></li>
+									</ul>
+									<ul>
+										<li><a ng-click="deezer.updateCategory(9)">Translation</a></li>
+										<li><a ng-click="deezer.updateCategory(13)">Link(s)</a></li>
+										<li class="last"><a ng-click="deezer.updateCategory(14)">Song Comparison</a></li>
+									</ul>
+								</div>
+								</div>
+								<div class="slide-sort">
+									<ul>
+										<li><a ng-click="deezer.updateSort('rating')">Highest Rated</a></li>
+										<li><a ng-click="deezer.updateSort('asc')">Oldest First</a></li>
+										<li class="active"><a ng-click="deezer.updateSort('desc')">Newest First</a></li>
+									</ul>
+								</div>
+								<form action="#" class="slide-thoughts">
+									<div class="thoughts-holder">
+										<div class="thoughts-left">
+											<div class="tag-block">
+												<textarea placeholder="Add your tags here. Separate with commas."></textarea>
+											</div>
+											<div class="select-holder">
+												<select title="Choose a Catagory">
+													<option>General Comment</option>
+													<option>Favorite</option>
+													<option>Memory</option>
+													<option>Interpretation</option>
+													<option>Song Meaning</option>
+													<option>My Opinion</option>
+													<option>Translation</option>
+													<option>Link(s)</option>
+													<option>Song Comparison</option>
+												</select>
+											</div>
+										</div>
+										<div class="thoughts-right">
+											<span class="pro-photo">
+												<span data-width="32" data-height="32" data-picture data-alt="image description">
+												<span data-width="32" data-height="32" data-src="images/thumb1.jpg" ></span>
+												<span data-width="32" data-height="32" data-src="images/thumb1-tablet.jpg" data-media="(max-width:1024px)" ></span>
+												<span data-width="32" data-height="32" data-src="images/thumb1-tablet2x.jpg" data-media="(max-width:1024px) and (-webkit-min-device-pixel-ratio:1.5), (max-width:1024px) and (min-resolution:144dpi)" ></span>
+												<span data-width="32" data-height="32" data-src="images/thumb1-tablet.jpg" data-media="(max-width:767px)" ></span>
+												<span data-width="32" data-height="32" data-src="images/thumb1-tablet2x.jpg" data-media="(max-width:767px) and (-webkit-min-device-pixel-ratio:1.5), (max-width:767px) and (min-resolution:144dpi)" ></span>
+												<!--[if (lt IE 9) & (!IEMobile)]>
+													<span data-src="images/thumb1.jpg"></span>
+												<![endif]-->
+												<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+												<noscript><img src="images/thumb1.jpg" width="32" height="32" alt="image description" ></noscript>
+											</span>
+											</span>
+											<textarea placeholder="Add your thoughts here..."></textarea>
+											<input class="button" type="submit" value="Post">
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+                    </div>
+
+				</footer>
+
+				<div class="scrollable-area comments-area">
+                    <div class="thespinner" ng-hide="deezer.commentsLoaded"><i class="fa fa-spinner fa-spin fa-4x"></i></div>
+                    <div class="comments-display-text"  ng-show="deezer.commentsLoaded && deezer.hasComments">Displaying Page {{deezer.navigation.pageCurrent}} of {{deezer.navigation.pageTotal}}<a name="comments-display-text"></a></div>
+
+                    <div class="comments-list">
+						<article class="comments-item" ng-repeat="comment in deezer.comments">
+							<div class="add-info">
+								<footer>
+									<strong class="title"><a href="{{comment.userUrl}}" target="_blank">{{comment.user}}</a></strong>
+									<time class="date">{{comment.date | date : format : timezone}}</time>
+									<div class="links">
+										<a href="#">{{comment.replies}} Replies</a> <span class="leave-reply">| <a href="#">Leave Your Reply</a></span>
+									</div>
+								</footer>
+								<div class="sub-title">
+									<span>{{comment.type}} Comment:</span>
+									<a href="#" class="link-flag">flag</a>
+								</div>
+								<p>
+                                    <span ng-hide="comment.expanded" ng-bind-html="comment.body | words:35 | newlines | unsafe"></span>
+                                    <a ng-show="deezer.getCommentWordCount(comment) > 35 && comment.expanded == false" ng-click="deezer.expandComment(deezer.comments.indexOf(comment))">Expand Comment</a>
+                                    <span ng-bind-html="comment.body | newlines | unsafe" ng-show="comment.expanded"></span>
+                                </p>
+							</div>
+							<div class="rating-holder">
+								<strong class="title"><span>Comment </span>Rating</strong>
+								<div class="count">{{comment.rating}}</div>
+								<nav class="action">
+									<ul>
+										<li class="minus"><a href="#">-</a></li>
+										<li><a href="#">+</a></li>
+									</ul>
+								</nav>
+							</div>
+						</article>
+
+					</div>
+                    <div class="meta-block"  ng-show="deezer.commentsLoaded && deezer.hasComments && deezer.navigation.pageTotal > 1">
+                        <a class="btn-add arrow-left" ng-click="deezer.prevPage()">&leftarrow; Previous Page</a>  <a class="btn-add arrow-right" ng-click="deezer.nextPage()" href="#comments-display-text">Next Page &rightarrow;</a>
+                    </div>
+				</div>
+            </div>
+		</main>
+		<footer id="footer">
+			<div class="footer-holder">
+				<div class="footer-info">
+					<p>Non-lyrical content copyright 1999-2014 SongMeanings <br>In partnership with <a href="#">ToneMedia</a></p>
+				</div>
+				<ul class="social-networks">
+					<li><a href="#" class="facebook">Facebook</a></li>
+					<li><a href="#" class="twitter">Twitter</a></li>
+					<li><a href="#" class="google">GooglePlus</a></li>
+					<li><a href="#" class="youtube">YouTube</a></li>
+				</ul>
+			</div>
+			<div class="footer-section">
+				<a href="#wrapper" class="back-top">Back to Top</a>
+			</div>
+		</footer>
+	</div>
+    <modal-dialog show='modalShown' width='400px' height='250px'>
+        <form>
+        <div class="login-holder">
+            <div class="login-info">
+                <dl>
+                    <dt>Username:</dt>
+                    <dd><input></dd>
+                    <dt>Password:</dt>
+                    <dd class="ng-binding"><input type="password"></dd>
+                    <dt></dt>
+                    <dd class="ng-binding"><button class="button login">Login</button></dd>
+                </dl>
+
+            </div>
+        </div>
+            <div class="fblogin-info">
+
+                    <button class="button"><i class="fa fa-facebook-square fa-2"></i> Facebook Login</button>
+
+            </div>
+        </form>
+    </modal-dialog>
+</body>
+</html>

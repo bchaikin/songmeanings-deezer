@@ -5,9 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>SongMeanings.net</title>
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-    <link media="all" rel="stylesheet" href="css/all.css">
+
     <link media="all" rel="stylesheet" href="/css/fancybox.css" />
-    <link media="all" rel="stylesheet" href="/css/overlay.css">
+    <!-- <link media="all" rel="stylesheet" href="/css/overlay.css"> -->
+    <link media="all" rel="stylesheet" href="css/all.css">
     <!-- <link media="all" rel="stylesheet" href="css/jquery.remodal.css"> -->
     <script src="js/jquery-1.8.3.min.js"></script>
     <script src="js/jquery.main.js"></script>
@@ -18,6 +19,54 @@
     <!--[if IE]><script src="js/ie.js"></script><![endif]-->
 </head>
 <body>
+    <a class="lightbox login" href="#popup1">Log in</a>
+    <div class="popup-holder">
+        <div id="popup1" class="lightbox">
+            <div class="login-box">
+                <div class="holder">
+                    <a href="#" class="facebook">Login with Facebook</a>
+                    <div class="tooltip">
+                        <p>Error: Can’t log in using Facebook</p>
+                    </div>
+                </div>
+                <div class="holder">
+                    <a href="#" class="google">Login with Google</a>
+                    <div class="tooltip">
+                        <p>Error: Can’t log in using Google</p>
+                    </div>
+                </div>
+                <div class="heading"><span>Or</span></div>
+                <form action="#" class="login-form">
+                    <fieldset>
+                        <div class="input-holder">
+                            <input type="text" placeholder="Username"/>
+                            <div class="tooltip">
+                                <p>User does not exist</p>
+                            </div>
+                        </div>
+                        <div class="input-holder password">
+                            <input type="password" placeholder="Password" />
+                            <div class="tooltip">
+                                <p>Incorrect Password</p>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <input type="checkbox" id="remember" />
+                            <label for="remember">Remember Me</label>
+                            <input type="submit" value="Log In" />
+                        </div>
+                    </fieldset>
+                </form>
+                <div class="block">
+                    <a href="#">Forgot username/password?</a>
+                    <a href="#" class="join">Join Now!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
 	<div id="wrapper">
 		<header id="header">
 			<div class="header-holder">
@@ -210,51 +259,7 @@
 		</footer>
 	</div>
 
-    <div class="popup-holder">
-        <div id="popup1" class="lightbox">
-            <div class="login-box">
-                <div class="holder">
-                    <a href="#" class="facebook">Login with Facebook</a>
-                    <div class="tooltip">
-                        <p>Error: Can’t log in using Facebook</p>
-                    </div>
-                </div>
-                <div class="holder">
-                    <a href="#" class="google">Login with Google</a>
-                    <div class="tooltip">
-                        <p>Error: Can’t log in using Google</p>
-                    </div>
-                </div>
-                <div class="heading"><span>Or</span></div>
-                <form action="#" class="login-form">
-                    <fieldset>
-                        <div class="input-holder">
-                            <input type="text" placeholder="Username"/>
-                            <div class="tooltip">
-                                <p>User does not exist</p>
-                            </div>
-                        </div>
-                        <div class="input-holder password">
-                            <input type="password" placeholder="Password" />
-                            <div class="tooltip">
-                                <p>Incorrect Password</p>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <input type="checkbox" id="remember" />
-                            <label for="remember">Remember Me</label>
-                            <input type="submit" value="Log In" />
-                        </div>
-                    </fieldset>
-                </form>
-                <div class="block">
-                    <a href="#">Forgot username/password?</a>
-                    <a href="#" class="join">Join Now!</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <a class="lightbox login" href="#popup1">Log in</a>
+
     <script>
 
         $(document).ready(function(){
