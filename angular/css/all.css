@@ -81,7 +81,7 @@ textarea:-ms-input-placeholder {color: #a1a1a1;}
 	overflow: hidden;
 }
 #header{
-	background: #2a3645; 
+	background: #2a3645;
 	-webkit-box-shadow: 0 3px 3px rgba(0,0,0,.25), inset 0 -1px #2a3645;
 	box-shadow: 0 3px 3px rgba(0,0,0,.25), inset 0 -1px #2a3645;
 }
@@ -620,12 +620,12 @@ textarea:-ms-input-placeholder {color: #a1a1a1;}
 }
 .add-info .sub-title span{float: left;}
 .add-info .sub-title .link-flag{
-	background: url(../images/sprite.png) no-repeat -93px -3px;
+
 	float: right;
-	width: 15px;
-	height: 15px;
-	text-indent:-9999px;
-	overflow:hidden;
+	width: 20px;
+	height: 20px;
+    color: #959595;
+
 }
 .add-info p a{
 	font-size: 12px;
@@ -1501,3 +1501,20 @@ a[ng-click] {
 
 
 .login-info .button.login:hover{background: #fb8c19;}
+
+.login-error{
+    border: 1px solid darkred;
+    margin: 0 15px;
+    padding: 5px;
+    font-size: 12px;
+    color: #6f0000;
+    background: rgba(255, 184, 192, 0.25);
+}
+
+.add-info .sub-title .link-flag{
+    font-size:16px;
+}
+
+.add-info .sub-title .link-flag.active{
+    color:#fb8c19;
+}

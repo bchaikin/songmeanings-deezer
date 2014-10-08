@@ -8,13 +8,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
     <script src="js/app.js"></script>
     <script src="js/truncate.js"></script>
+    <script src="js/ngFacebook.js"></script>
 
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 	<link media="all" rel="stylesheet" href="css/all.css">
 
-	<script src="js/jquery-1.8.3.min.js"></script>
-	<script src="js/jquery.main.js"></script>
-	<!--[if IE]><script src="js/ie.js"></script><![endif]-->
+	<script src="js/lib/jquery-1.8.3.min.js"></script>
+	<script src="js/lib/jquery.main.js"></script>
+
+	<!--[if IE]><script src="js/lib/ie.js"></script><![endif]-->
 
 </head>
 <body ng-controller="DeezerController as deezer">
@@ -29,7 +31,7 @@
 					<a href="#" class="opener">account</a>
 					<ul>
 						<li><a href="#">Sign Up</a></li>
-						<li class="signin" ><a ng-click='toggleModal()'>Login</a></li>
+						<li class="signin" ><a ng-click='toggleModal()' ng-show="deezer.user == null">Login</a><a ng-click='deezer.logout()' ng-show="deezer.user != null">Logout</a></li>
 					</ul>
 				</div>
 			</div>
@@ -76,7 +78,8 @@
 					<div class="meta-frame">
 						<div class="meta-frame2">
 							<div class="meta-holder">
-								<a href="#" class="btn-add thoughts-opener">Add Your Thoughts</a>
+								<a ng-show="deezer.user != null" href="#" class="btn-add thoughts-opener">Add Your Thoughts</a>
+                                <a ng-show="deezer.user == null" ng-click='toggleModal()' class="btn-add" >Add Your Thoughts</a>
 								<strong class="title">{{deezer.song.numComments}} Comments</strong>
 								<div class="filter">
 									<a class="filter-opener" href="#">Filter <span>by Category</span></a>
@@ -205,7 +208,8 @@
 								</footer>
 								<div class="sub-title">
 									<span>{{comment.type}} Comment:</span>
-									<a href="#" class="link-flag">flag</a>
+									<a ng-hide="comment.flagged" ng-click="deezer.flagComment(deezer.comments.indexOf(comment))" class="link-flag"><i class="fa fa-flag fa-2"></i></a>
+                                    <a ng-show="comment.flagged" class="link-flag active"><i class="fa fa-flag fa-2"></i></a>
 								</div>
 								<p>
                                     <span ng-hide="comment.expanded" ng-bind-html="comment.body | words:35 | newlines | unsafe"></span>
@@ -217,10 +221,14 @@
 								<strong class="title"><span>Comment </span>Rating</strong>
 								<div class="count">{{comment.rating}}</div>
 								<nav class="action">
-									<ul>
-										<li class="minus"><a href="#">-</a></li>
-										<li><a href="#">+</a></li>
+									<ul ng-show="deezer.user == null">
+										<li class="minus"><a ng-click='toggleModal()'>-</a></li>
+										<li><a ng-click='toggleModal()'>+</a></li>
 									</ul>
+                                    <ul ng-show="deezer.user != null">
+                                        <li class="minus"><a ng-click="deezer.updateCommentRating(deezer.comments.indexOf(comment),'down')">-</a></li>
+                                        <li><a ng-click="deezer.updateCommentRating(deezer.comments.indexOf(comment),'up')">+</a></li>
+                                    </ul>
 								</nav>
 							</div>
 						</article>
@@ -249,24 +257,26 @@
 			</div>
 		</footer>
 	</div>
-    <modal-dialog show='modalShown' width='400px' height='250px'>
-        <form>
+    <modal-dialog show='modalShown' width='400px' height='{{deezer.modalHeight}}}'>
+
+        <form name="loginForm" role="form">
         <div class="login-holder">
             <div class="login-info">
+                <div class="login-error" ng-show="deezer.loginMsg != ''">{{deezer.loginMsg}}</div>
                 <dl>
                     <dt>Username:</dt>
-                    <dd><input></dd>
+                    <dd><input ng-model="deezer.username"></dd>
                     <dt>Password:</dt>
-                    <dd class="ng-binding"><input type="password"></dd>
+                    <dd class="ng-binding"><input ng-model="deezer.password" type="password"></dd>
                     <dt></dt>
-                    <dd class="ng-binding"><button class="button login">Login</button></dd>
+                    <dd class="ng-binding"><button class="button login" ng-click="deezer.login();">Login</button></dd>
                 </dl>
 
             </div>
         </div>
             <div class="fblogin-info">
 
-                    <button class="button"><i class="fa fa-facebook-square fa-2"></i> Facebook Login</button>
+                    <button class="button" ng-click="deezer.loginFB();"><i class="fa fa-facebook-square fa-2"></i> Facebook Login</button>
 
             </div>
         </form>

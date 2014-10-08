@@ -2,12 +2,111 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b214d55f-bb81-4168-8f26-eeb79decb9c7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fb.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/deployment.xml" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/fancybox.css" afterPath="$PROJECT_DIR$/css/fancybox.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/overlay/index.html" afterPath="$PROJECT_DIR$/overlay/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/overlay.css" afterPath="$PROJECT_DIR$/css/overlay.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/angular/js/ngFacebook.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/old/README.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/css/all.css" afterPath="$PROJECT_DIR$/old/css/all.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/css/fancybox.css" afterPath="$PROJECT_DIR$/old/css/fancybox.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/css/ie.css" afterPath="$PROJECT_DIR$/old/css/ie.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/css/overlay.css" afterPath="$PROJECT_DIR$/old/css/overlay.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/deezer.songmenaings.angular/.idea/.name" afterPath="$PROJECT_DIR$/angular/.idea/.name" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/deezer.songmenaings.angular/.idea/deezer.songmenaings.angular.iml" afterPath="$PROJECT_DIR$/angular/.idea/deezer.songmenaings.angular.iml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/deezer.songmenaings.angular/.idea/encodings.xml" afterPath="$PROJECT_DIR$/angular/.idea/encodings.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/deezer.songmenaings.angular/.idea/misc.xml" afterPath="$PROJECT_DIR$/angular/.idea/misc.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/deezer.songmenaings.angular/.idea/modules.xml" afterPath="$PROJECT_DIR$/angular/.idea/modules.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/deezer.songmenaings.angular/.idea/scopes/scope_settings.xml" afterPath="$PROJECT_DIR$/angular/.idea/scopes/scope_settings.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/deezer.songmenaings.angular/.idea/vcs.xml" afterPath="$PROJECT_DIR$/angular/.idea/vcs.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/deezer.songmenaings.angular/.idea/workspace.xml" afterPath="$PROJECT_DIR$/angular/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/deezer.songmenaings.angular/css/all.css" afterPath="$PROJECT_DIR$/angular/css/all.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/deezer.songmenaings.angular/images/bg-body-tablet.jpg" afterPath="$PROJECT_DIR$/angular/images/bg-body-tablet.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/deezer.songmenaings.angular/images/bg-body-tablet.png" afterPath="$PROJECT_DIR$/angular/images/bg-body-tablet.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/deezer.songmenaings.angular/images/bg-body-tablet@2x.jpg" afterPath="$PROJECT_DIR$/angular/images/bg-body-tablet@2x.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/deezer.songmenaings.angular/images/bg-body-tablet@2x.png" afterPath="$PROJECT_DIR$/angular/images/bg-body-tablet@2x.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/deezer.songmenaings.angular/images/bg-body.jpg" afterPath="$PROJECT_DIR$/angular/images/bg-body.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/deezer.songmenaings.angular/images/bg-body.png" afterPath="$PROJECT_DIR$/angular/images/bg-body.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/deezer.songmenaings.angular/images/img1-mobile.jpg" afterPath="$PROJECT_DIR$/angular/images/img1-mobile.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/deezer.songmenaings.angular/images/img1-mobile2x.jpg" afterPath="$PROJECT_DIR$/angular/images/img1-mobile2x.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/deezer.songmenaings.angular/images/img1-tablet.jpg" afterPath="$PROJECT_DIR$/angular/images/img1-tablet.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/deezer.songmenaings.angular/images/img1-tablet2x.jpg" afterPath="$PROJECT_DIR$/angular/images/img1-tablet2x.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/deezer.songmenaings.angular/images/img1.jpg" afterPath="$PROJECT_DIR$/angular/images/img1.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/deezer.songmenaings.angular/images/logo-tablet.png" afterPath="$PROJECT_DIR$/angular/images/logo-tablet.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/deezer.songmenaings.angular/images/logo-tablet@2x.png" afterPath="$PROJECT_DIR$/angular/images/logo-tablet@2x.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/deezer.songmenaings.angular/images/logo.png" afterPath="$PROJECT_DIR$/angular/images/logo.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/deezer.songmenaings.angular/images/no-album.png" afterPath="$PROJECT_DIR$/angular/images/no-album.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/deezer.songmenaings.angular/images/sprite-tablet.png" afterPath="$PROJECT_DIR$/angular/images/sprite-tablet.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/deezer.songmenaings.angular/images/sprite-tablet@2x.png" afterPath="$PROJECT_DIR$/angular/images/sprite-tablet@2x.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/deezer.songmenaings.angular/images/sprite.png" afterPath="$PROJECT_DIR$/angular/images/sprite.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/deezer.songmenaings.angular/images/thumb1-tablet.jpg" afterPath="$PROJECT_DIR$/angular/images/thumb1-tablet.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/deezer.songmenaings.angular/images/thumb1-tablet2x.jpg" afterPath="$PROJECT_DIR$/angular/images/thumb1-tablet2x.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/deezer.songmenaings.angular/images/thumb1.jpg" afterPath="$PROJECT_DIR$/angular/images/thumb1.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/deezer.songmenaings.angular/index.html" afterPath="$PROJECT_DIR$/angular/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/deezer.songmenaings.angular/js/app.js" afterPath="$PROJECT_DIR$/angular/js/app.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/deezer.songmenaings.angular/js/ie.js" afterPath="$PROJECT_DIR$/angular/js/lib/ie.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/deezer.songmenaings.angular/js/jquery-1.8.3.min.js" afterPath="$PROJECT_DIR$/angular/js/lib/jquery-1.8.3.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/deezer.songmenaings.angular/js/jquery.main.js" afterPath="$PROJECT_DIR$/angular/js/lib/jquery.main.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/deezer.songmenaings.angular/js/truncate.js" afterPath="$PROJECT_DIR$/angular/js/truncate.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/fb.html" afterPath="$PROJECT_DIR$/old/fb.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/bg-body-tablet.jpg" afterPath="$PROJECT_DIR$/old/images/bg-body-tablet.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/bg-body-tablet.png" afterPath="$PROJECT_DIR$/old/images/bg-body-tablet.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/bg-body-tablet@2x.jpg" afterPath="$PROJECT_DIR$/old/images/bg-body-tablet@2x.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/bg-body-tablet@2x.png" afterPath="$PROJECT_DIR$/old/images/bg-body-tablet@2x.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/bg-body.jpg" afterPath="$PROJECT_DIR$/old/images/bg-body.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/bg-body.png" afterPath="$PROJECT_DIR$/old/images/bg-body.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/checkbox-active.png" afterPath="$PROJECT_DIR$/old/images/checkbox-active.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/checkbox.png" afterPath="$PROJECT_DIR$/old/images/checkbox.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/corner.png" afterPath="$PROJECT_DIR$/old/images/corner.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/error-ico.png" afterPath="$PROJECT_DIR$/old/images/error-ico.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/facebook-ico.png" afterPath="$PROJECT_DIR$/old/images/facebook-ico.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/fancybox/blank.gif" afterPath="$PROJECT_DIR$/old/images/fancybox/blank.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/fancybox/fancy_loading.png" afterPath="$PROJECT_DIR$/old/images/fancybox/fancy_loading.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/fancybox/fancy_nav_left.png" afterPath="$PROJECT_DIR$/old/images/fancybox/fancy_nav_left.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/fancybox/fancy_nav_right.png" afterPath="$PROJECT_DIR$/old/images/fancybox/fancy_nav_right.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/fancybox/fancy_shadow_e.png" afterPath="$PROJECT_DIR$/old/images/fancybox/fancy_shadow_e.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/fancybox/fancy_shadow_n.png" afterPath="$PROJECT_DIR$/old/images/fancybox/fancy_shadow_n.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/fancybox/fancy_shadow_ne.png" afterPath="$PROJECT_DIR$/old/images/fancybox/fancy_shadow_ne.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/fancybox/fancy_shadow_nw.png" afterPath="$PROJECT_DIR$/old/images/fancybox/fancy_shadow_nw.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/fancybox/fancy_shadow_s.png" afterPath="$PROJECT_DIR$/old/images/fancybox/fancy_shadow_s.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/fancybox/fancy_shadow_se.png" afterPath="$PROJECT_DIR$/old/images/fancybox/fancy_shadow_se.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/fancybox/fancy_shadow_sw.png" afterPath="$PROJECT_DIR$/old/images/fancybox/fancy_shadow_sw.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/fancybox/fancy_shadow_w.png" afterPath="$PROJECT_DIR$/old/images/fancybox/fancy_shadow_w.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/fancybox/fancy_title_left.png" afterPath="$PROJECT_DIR$/old/images/fancybox/fancy_title_left.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/fancybox/fancy_title_main.png" afterPath="$PROJECT_DIR$/old/images/fancybox/fancy_title_main.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/fancybox/fancy_title_over.png" afterPath="$PROJECT_DIR$/old/images/fancybox/fancy_title_over.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/fancybox/fancy_title_right.png" afterPath="$PROJECT_DIR$/old/images/fancybox/fancy_title_right.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/fancybox/fancybox-x.png" afterPath="$PROJECT_DIR$/old/images/fancybox/fancybox-x.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/fancybox/fancybox-y.png" afterPath="$PROJECT_DIR$/old/images/fancybox/fancybox-y.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/fancybox/fancybox.png" afterPath="$PROJECT_DIR$/old/images/fancybox/fancybox.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/google-ico.png" afterPath="$PROJECT_DIR$/old/images/google-ico.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/img1-mobile.jpg" afterPath="$PROJECT_DIR$/old/images/img1-mobile.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/img1-mobile2x.jpg" afterPath="$PROJECT_DIR$/old/images/img1-mobile2x.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/img1-tablet.jpg" afterPath="$PROJECT_DIR$/old/images/img1-tablet.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/img1-tablet2x.jpg" afterPath="$PROJECT_DIR$/old/images/img1-tablet2x.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/img1.jpg" afterPath="$PROJECT_DIR$/old/images/img1.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/logo-tablet.png" afterPath="$PROJECT_DIR$/old/images/logo-tablet.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/logo-tablet@2x.png" afterPath="$PROJECT_DIR$/old/images/logo-tablet@2x.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/logo.png" afterPath="$PROJECT_DIR$/old/images/logo.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/no-album.png" afterPath="$PROJECT_DIR$/old/images/no-album.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/password-ico.png" afterPath="$PROJECT_DIR$/old/images/password-ico.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/password-ico2.png" afterPath="$PROJECT_DIR$/old/images/password-ico2.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/sprite-tablet.png" afterPath="$PROJECT_DIR$/old/images/sprite-tablet.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/sprite-tablet@2x.png" afterPath="$PROJECT_DIR$/old/images/sprite-tablet@2x.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/sprite.png" afterPath="$PROJECT_DIR$/old/images/sprite.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/thumb1-tablet.jpg" afterPath="$PROJECT_DIR$/old/images/thumb1-tablet.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/thumb1-tablet2x.jpg" afterPath="$PROJECT_DIR$/old/images/thumb1-tablet2x.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/thumb1.jpg" afterPath="$PROJECT_DIR$/old/images/thumb1.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/user-ico.png" afterPath="$PROJECT_DIR$/old/images/user-ico.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/user-ico2.png" afterPath="$PROJECT_DIR$/old/images/user-ico2.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/old/index.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/index_old.php" afterPath="$PROJECT_DIR$/old/index_old.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/js/app.js" afterPath="$PROJECT_DIR$/old/js/app.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/js/ie.js" afterPath="$PROJECT_DIR$/old/js/ie.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/js/jquery-1.8.3.min.js" afterPath="$PROJECT_DIR$/old/js/jquery-1.8.3.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/js/jquery.main.js" afterPath="$PROJECT_DIR$/old/js/jquery.main.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/js/jquery.remodal.js" afterPath="$PROJECT_DIR$/old/js/jquery.remodal.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/js/moment.min.js" afterPath="$PROJECT_DIR$/old/js/moment.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/overlay/index.html" afterPath="$PROJECT_DIR$/old/overlay/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/overlay/js/ie.js" afterPath="$PROJECT_DIR$/old/overlay/js/ie.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/overlay/js/jquery-1.8.3.min.js" afterPath="$PROJECT_DIR$/old/overlay/js/jquery-1.8.3.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/overlay/js/jquery.main.js" afterPath="$PROJECT_DIR$/old/overlay/js/jquery.main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="songmeanings-deezer.iws" />
@@ -31,70 +130,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="all.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/all.css">
+      <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/angular/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="19841" max-vertical-offset="20850">
-              <caret line="1360" column="28" selection-start-line="1360" selection-start-column="28" selection-end-line="1360" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.8131241" vertical-offset="0" max-vertical-offset="6000">
+              <caret line="38" column="6" selection-start-line="38" selection-start-column="6" selection-end-line="38" selection-end-column="6" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/index.php">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/angular/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.2927928" vertical-offset="3791" max-vertical-offset="4485">
-              <caret line="291" column="13" selection-start-line="262" selection-start-column="4" selection-end-line="291" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="5670" max-vertical-offset="7110">
-              <caret line="378" column="0" selection-start-line="378" selection-start-column="0" selection-end-line="378" selection-end-column="0" />
-              <folding>
-                <marker date="1408717095000" expanded="true" signature="7248:7363" placeholder="..." />
-                <marker date="1408717095000" expanded="true" signature="7291:7363" placeholder="..." />
-                <marker date="1408717095000" expanded="true" signature="7314:7363" placeholder="..." />
-                <marker date="1408717095000" expanded="true" signature="7519:7556" placeholder="..." />
-                <marker date="1408717095000" expanded="true" signature="7771:7808" placeholder="..." />
-                <marker date="1408717095000" expanded="false" signature="8117:8129" placeholder="..." />
-                <marker date="1408717095000" expanded="true" signature="8224:8315" placeholder="..." />
-                <marker date="1408717095000" expanded="true" signature="8365:8483" placeholder="..." />
-                <marker date="1408717095000" expanded="true" signature="8375:8472" placeholder="..." />
-                <marker date="1408717095000" expanded="true" signature="8516:8530" placeholder="..." />
-                <marker date="1408717095000" expanded="true" signature="8769:8884" placeholder="..." />
-                <marker date="1408717095000" expanded="true" signature="8812:8884" placeholder="..." />
-                <marker date="1408717095000" expanded="true" signature="8835:8884" placeholder="..." />
-                <marker date="1408717095000" expanded="true" signature="9040:9077" placeholder="..." />
-                <marker date="1408717095000" expanded="true" signature="9292:9462" placeholder="..." />
-                <marker date="1408717095000" expanded="true" signature="9563:9654" placeholder="..." />
-                <marker date="1408717095000" expanded="true" signature="9704:9822" placeholder="..." />
-                <marker date="1408717095000" expanded="true" signature="9714:9811" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="overlay.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/overlay.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="4455">
-              <caret line="30" column="23" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fb.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fb.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="810" max-vertical-offset="1605">
-              <caret line="54" column="48" selection-start-line="54" selection-start-column="48" selection-end-line="54" selection-end-column="48" />
+            <state vertical-scroll-proportion="-158.75" vertical-offset="0" max-vertical-offset="4350">
+              <caret line="254" column="25" selection-start-line="254" selection-start-column="25" selection-end-line="254" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -121,14 +171,21 @@
         <option value="$PROJECT_DIR$/css/overlay.css" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/fb.html" />
+        <option value="$PROJECT_DIR$/angular/js/truncate.js" />
+        <option value="$PROJECT_DIR$/angular/fb.html" />
+        <option value="$PROJECT_DIR$/angular/js/lib/fb.js" />
+        <option value="$PROJECT_DIR$/old/fb.html" />
+        <option value="$PROJECT_DIR$/angular/css/all.css" />
+        <option value="$PROJECT_DIR$/angular/index.html" />
+        <option value="$PROJECT_DIR$/angular/js/app.js" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="960" />
-    <option name="height" value="829" />
+    <option name="width" value="1920" />
+    <option name="height" value="1129" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -237,21 +294,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="songmeanings-deezer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="songmeanings-deezer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="deezer.songmenaings.angular" />
+              <option name="myItemId" value="angular" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -269,15 +312,29 @@
     <property name="options.searchVisible" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="SearchEverywhereHistory" value="" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/bryan/Sites/songmeanings-deezer/angular/index.html" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/angular" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/angular/js" />
+      <recent name="$PROJECT_DIR$/angular/js/lib" />
+      <recent name="$PROJECT_DIR$/old" />
       <recent name="$PROJECT_DIR$/images" />
       <recent name="$PROJECT_DIR$/css" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -288,12 +345,14 @@
       <option name="showConsoleOnStdOut" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
+    <configuration default="true" type="CucumberJavaScriptRunConfigurationType" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" />
+      <option name="executablePath" />
       <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
@@ -301,16 +360,6 @@
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="Chrome" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="CucumberJavaScriptRunConfigurationType" factoryName="Cucumber.js">
-      <option name="cucumberJsArguments" />
-      <option name="executablePath" />
-      <option name="filePath" />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -334,20 +383,20 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="960" height="829" extended-state="0" />
+    <frame x="0" y="23" width="1920" height="1129" extended-state="6" />
     <editor active="false" />
     <layout>
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24905661" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297975" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26229507" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25416666" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12135417" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32894737" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32673267" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32735848" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -374,9 +423,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20660277" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -397,409 +446,361 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="4" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="4485">
-          <caret line="45" column="30" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/overlay.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="4455">
-          <caret line="20" column="680" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/all.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="20850">
-          <caret line="1360" column="28" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2247" max-vertical-offset="4485">
-          <caret line="285" column="97" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/overlay.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="4455">
-          <caret line="20" column="680" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/all.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="20850">
-          <caret line="1360" column="28" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
+    <entry file="file://$PROJECT_DIR$/old/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="3477" max-vertical-offset="4485">
           <caret line="285" column="97" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/overlay.css">
+    <entry file="file://$PROJECT_DIR$/old/css/overlay.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="4455">
           <caret line="20" column="680" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/all.css">
+    <entry file="file://$PROJECT_DIR$/old/css/all.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="20850">
           <caret line="1360" column="28" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
+    <entry file="file://$PROJECT_DIR$/old/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="3477" max-vertical-offset="4485">
           <caret line="285" column="97" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/overlay.css">
+    <entry file="file://$PROJECT_DIR$/old/css/overlay.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="4455">
           <caret line="20" column="680" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/all.css">
+    <entry file="file://$PROJECT_DIR$/old/css/all.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="20850">
           <caret line="1360" column="28" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
+    <entry file="file://$PROJECT_DIR$/old/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="3513" max-vertical-offset="4485">
           <caret line="285" column="97" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/overlay.css">
+    <entry file="file://$PROJECT_DIR$/old/css/overlay.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="4455">
           <caret line="20" column="680" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/app.js">
+    <entry file="file://$PROJECT_DIR$/old/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7110">
           <caret line="459" column="7" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/all.css">
+    <entry file="file://$PROJECT_DIR$/old/css/all.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="20091" max-vertical-offset="20850">
           <caret line="1360" column="28" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
+    <entry file="file://$PROJECT_DIR$/old/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="4485">
           <caret line="30" column="22" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/overlay.css">
+    <entry file="file://$PROJECT_DIR$/old/css/overlay.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1185" max-vertical-offset="4455">
           <caret line="79" column="14" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/app.js">
+    <entry file="file://$PROJECT_DIR$/old/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7110">
           <caret line="459" column="7" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/all.css">
+    <entry file="file://$PROJECT_DIR$/old/css/all.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="20091" max-vertical-offset="20850">
           <caret line="1360" column="28" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
+    <entry file="file://$PROJECT_DIR$/old/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="33" max-vertical-offset="4485">
           <caret line="26" column="42" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/overlay.css">
+    <entry file="file://$PROJECT_DIR$/old/css/overlay.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="4455">
           <caret line="34" column="23" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/app.js">
+    <entry file="file://$PROJECT_DIR$/old/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7110">
           <caret line="459" column="7" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/all.css">
+    <entry file="file://$PROJECT_DIR$/old/css/all.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="20091" max-vertical-offset="20850">
           <caret line="1360" column="28" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
+    <entry file="file://$PROJECT_DIR$/old/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="414" max-vertical-offset="3690">
           <caret line="44" column="53" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index_old.php">
+    <entry file="file://$PROJECT_DIR$/old/index_old.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="465" max-vertical-offset="3255">
           <caret line="45" column="27" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index_old.php">
+    <entry file="file://$PROJECT_DIR$/old/index_old.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2253" max-vertical-offset="3255">
           <caret line="175" column="46" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/app.js">
+    <entry file="file://$PROJECT_DIR$/old/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="6960">
           <caret line="144" column="59" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index_old.php">
+    <entry file="file://$PROJECT_DIR$/old/index_old.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2295" max-vertical-offset="3255">
           <caret line="165" column="10" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/app.js">
+    <entry file="file://$PROJECT_DIR$/old/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="6960">
           <caret line="144" column="59" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index_old.php">
+    <entry file="file://$PROJECT_DIR$/old/index_old.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3045">
           <caret line="39" column="36" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/app.js">
+    <entry file="file://$PROJECT_DIR$/old/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="758" max-vertical-offset="6555">
           <caret line="66" column="66" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index_old.php">
+    <entry file="file://$PROJECT_DIR$/old/index_old.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3045">
           <caret line="39" column="36" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/app.js">
+    <entry file="file://$PROJECT_DIR$/old/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="143" max-vertical-offset="6555">
           <caret line="30" column="4" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index_old.php">
+    <entry file="file://$PROJECT_DIR$/old/index_old.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2550">
           <caret line="11" column="68" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/app.js">
+    <entry file="file://$PROJECT_DIR$/old/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="5440" max-vertical-offset="6465">
           <caret line="419" column="22" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index_old.php">
+    <entry file="file://$PROJECT_DIR$/old/index_old.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2535">
           <caret line="9" column="21" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/app.js">
+    <entry file="file://$PROJECT_DIR$/old/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="3253" max-vertical-offset="4815">
           <caret line="214" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index_old.php">
+    <entry file="file://$PROJECT_DIR$/old/index_old.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2535">
           <caret line="9" column="21" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/app.js">
+    <entry file="file://$PROJECT_DIR$/old/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2760" max-vertical-offset="4080">
           <caret line="208" column="24" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index_old.php">
+    <entry file="file://$PROJECT_DIR$/old/index_old.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="3825">
           <caret line="3" column="26" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index_old.php">
+    <entry file="file://$PROJECT_DIR$/old/index_old.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3255814" vertical-offset="465" max-vertical-offset="3255">
           <caret line="45" column="27" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/overlay/js/jquery.main.js">
+    <entry file="file://$PROJECT_DIR$/old/overlay/js/jquery.main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.36585367" vertical-offset="0" max-vertical-offset="17670">
           <caret line="16" column="30" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/overlay/index.html">
+    <entry file="file://$PROJECT_DIR$/old/overlay/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.15800416" vertical-offset="73" max-vertical-offset="1035">
           <caret line="15" column="4" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/overlay/js/jquery-1.8.3.min.js">
+    <entry file="file://$PROJECT_DIR$/old/overlay/js/jquery-1.8.3.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="658">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/fancybox.css">
+    <entry file="file://$PROJECT_DIR$/old/css/fancybox.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.22316684" vertical-offset="0" max-vertical-offset="4485">
           <caret line="14" column="23" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/all.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="19841" max-vertical-offset="20850">
-          <caret line="1360" column="28" selection-start-line="1360" selection-start-column="28" selection-end-line="1360" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/overlay.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="4455">
-          <caret line="30" column="23" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fb.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="810" max-vertical-offset="1605">
-          <caret line="54" column="48" selection-start-line="54" selection-start-column="48" selection-end-line="54" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/app.js">
+    <entry file="file://$PROJECT_DIR$/old/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="5670" max-vertical-offset="7110">
           <caret line="378" column="0" selection-start-line="378" selection-start-column="0" selection-end-line="378" selection-end-column="0" />
-          <folding>
-            <marker date="1408717095000" expanded="true" signature="7248:7363" placeholder="..." />
-            <marker date="1408717095000" expanded="true" signature="7291:7363" placeholder="..." />
-            <marker date="1408717095000" expanded="true" signature="7314:7363" placeholder="..." />
-            <marker date="1408717095000" expanded="true" signature="7519:7556" placeholder="..." />
-            <marker date="1408717095000" expanded="true" signature="7771:7808" placeholder="..." />
-            <marker date="1408717095000" expanded="false" signature="8117:8129" placeholder="..." />
-            <marker date="1408717095000" expanded="true" signature="8224:8315" placeholder="..." />
-            <marker date="1408717095000" expanded="true" signature="8365:8483" placeholder="..." />
-            <marker date="1408717095000" expanded="true" signature="8375:8472" placeholder="..." />
-            <marker date="1408717095000" expanded="true" signature="8516:8530" placeholder="..." />
-            <marker date="1408717095000" expanded="true" signature="8769:8884" placeholder="..." />
-            <marker date="1408717095000" expanded="true" signature="8812:8884" placeholder="..." />
-            <marker date="1408717095000" expanded="true" signature="8835:8884" placeholder="..." />
-            <marker date="1408717095000" expanded="true" signature="9040:9077" placeholder="..." />
-            <marker date="1408717095000" expanded="true" signature="9292:9462" placeholder="..." />
-            <marker date="1408717095000" expanded="true" signature="9563:9654" placeholder="..." />
-            <marker date="1408717095000" expanded="true" signature="9704:9822" placeholder="..." />
-            <marker date="1408717095000" expanded="true" signature="9714:9811" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
+    <entry file="file://$PROJECT_DIR$/old/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2927928" vertical-offset="3791" max-vertical-offset="4485">
-          <caret line="291" column="13" selection-start-line="262" selection-start-column="4" selection-end-line="291" selection-end-column="13" />
+        <state vertical-scroll-proportion="-17.56" vertical-offset="3521" max-vertical-offset="4485">
+          <caret line="264" column="27" selection-start-line="264" selection-start-column="27" selection-end-line="264" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/old/css/overlay.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="4455">
+          <caret line="30" column="23" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/old/css/all.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.159751" vertical-offset="19841" max-vertical-offset="20850">
+          <caret line="1360" column="28" selection-start-line="1360" selection-start-column="28" selection-end-line="1360" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/js/truncate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.78688526" vertical-offset="0" max-vertical-offset="915">
+          <caret line="48" column="7" selection-start-line="48" selection-start-column="7" selection-end-line="48" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/js/ngFacebook.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3435">
+          <caret line="4" column="35" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/css/all.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="22107" max-vertical-offset="22875">
+          <caret line="1497" column="18" selection-start-line="1497" selection-start-column="16" selection-end-line="1497" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/old/fb.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="9.625" vertical-offset="861" max-vertical-offset="1605">
+          <caret line="42" column="41" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-158.75" vertical-offset="0" max-vertical-offset="4350">
+          <caret line="254" column="25" selection-start-line="254" selection-start-column="25" selection-end-line="254" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8131241" vertical-offset="0" max-vertical-offset="6000">
+          <caret line="38" column="6" selection-start-line="38" selection-start-column="6" selection-end-line="38" selection-end-column="6" />
           <folding />
         </state>
       </provider>
