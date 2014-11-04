@@ -13,7 +13,7 @@
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 	<link media="all" rel="stylesheet" href="css/all.css">
 
-	<script src="js/lib/jquery-1.8.3.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 	<script src="js/lib/jquery.main.js"></script>
 
 	<!--[if IE]><script src="js/lib/ie.js"></script><![endif]-->
@@ -31,7 +31,7 @@
 					<a href="#" class="opener">account</a>
 					<ul>
 						<li><a href="#">Sign Up</a></li>
-						<li class="signin" ><a ng-click='toggleModal()' ng-show="deezer.user == null">Login</a><a ng-click='deezer.logout()' ng-show="deezer.user != null">Logout</a></li>
+						<li class="signin" ><a ng-click='toggleModal();' ng-show="deezer.user == null">Login</a><a ng-click='deezer.logout()' ng-show="deezer.user != null">Logout</a></li>
 					</ul>
 				</div>
 			</div>
@@ -257,13 +257,19 @@
 			</div>
 		</footer>
 	</div>
-    <modal-dialog show='modalShown' width='400px' height='{{deezer.modalHeight}}}'>
+    <modal-dialog id="the-modal" show='modalShown' width='400px' height='{{deezer.modalHeight}}}'>
 
-        <form name="loginForm" role="form">
+        <form name="loginForm" role="form" >
         <div class="login-holder">
-            <div class="login-info">
+            <div class="login-info" ng-show="deezer.modalLoginShown == false">
+                <div class="thespinner">
+                    <i class="fa fa-spinner fa-spin fa-3x"></i>
+
+                </div>
+            </div>
+            <div class="login-info" ng-show="deezer.modalLoginShown">
                 <div class="login-error" ng-show="deezer.loginMsg != ''">{{deezer.loginMsg}}</div>
-                <dl>
+                <dl ng-show="deezer.fbRegister == false">
                     <dt>Username:</dt>
                     <dd><input ng-model="deezer.username"></dd>
                     <dt>Password:</dt>
@@ -271,10 +277,17 @@
                     <dt></dt>
                     <dd class="ng-binding"><button class="button login" ng-click="deezer.login();">Login</button></dd>
                 </dl>
+                <dl ng-show="deezer.fbRegister == true">
+                    <dt>Username:</dt>
+                    <dd><input ng-model="deezer.fbUsername"></dd>
+                    <dt></dt>
+                    <dd class="ng-binding"><button class="button login" ng-click="deezer.registerFB();">Register</button></dd>
+                </dl>
+
 
             </div>
         </div>
-            <div class="fblogin-info">
+            <div class="fblogin-info" ng-show="deezer.fbRegister == false">
 
                     <button class="button" ng-click="deezer.loginFB();"><i class="fa fa-facebook-square fa-2"></i> Facebook Login</button>
 

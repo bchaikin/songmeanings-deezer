@@ -1358,7 +1358,7 @@ textarea:-ms-input-placeholder {color: #a1a1a1;}
 	.follow-block a.link-follow:before,
 	.action a:after,
 	.social-networks a,
-	.add-info .sub-title .link-flag,
+	/*.add-info .sub-title .link-flag,*/
 	.info-list .link-holder a:after,
 	.follow-block a.link-follow.active:before{
 		background: url(../images/sprite-tablet@2x.png) no-repeat;
@@ -1428,6 +1428,16 @@ a[ng-click] {
     background-color: #fff;
     box-shadow: 4px 4px 80px #000;
 }
+
+#the-modal{
+    height: 250px;
+    transition: height 1s;
+    -moz-transition: height 1s; /* Firefox 4 */
+    -webkit-transition: height 1s; /* Safari and Chrome */
+    -o-transition: height 1s; /* Opera */
+    -ms-transition: height 1s; /* IE9 (maybe) */
+}
+
 .ng-modal-dialog-content {
     padding:10px;
     text-align: left;

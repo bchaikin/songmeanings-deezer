@@ -46,8 +46,8 @@
         this.song = {};
         this.comments = [];
         this.navigation = {
-            commentSort: 'date',
-            commentOrder: 'desc',
+            commentSort: 'desc',
+            commentOrder: 'date',
             commentType: 'all',
             pageSize: 10,
             pageCurrent: 1
@@ -57,12 +57,27 @@
         this.user = u;
         this.username = "";
         this.password = "";
+        this.fbUsername = "";
+        this.fbRegister = false;
         this.loginMsg = "";
         this.modalHeight = "250px";
+        this.modalLoginShown = true;
+        this.fbAccessToken = "";
+
 
         $scope.modalShown = false;
         $scope.toggleModal = function() {
-            $scope.modalShown = !$scope.modalShown;
+            if($scope.modalShown)
+                $scope.modalShown = false;
+            else
+            {
+                sm.modalLoginShown = true;
+                sm.fbRegister = false;
+                sm.loginMsg = "";
+                sm.modalHeight = "250px";
+                $scope.modalShown = true;
+            }
+
         };
 
         this.ratingActive = "";
@@ -174,15 +189,15 @@
             sm.descActive = "";
 
             if(sort == 'rating'){
-                sm.navigation.commentSort = sort;
-                sm.navigation.commentOrder = 'desc';
+                sm.navigation.commentSort = 'desc';
+                sm.navigation.commentOrder = 'rating';
                 sm.ratingActive = "active";
 
             }
             else
             {
-                sm.navigation.commentSort = 'date';
-                sm.navigation.commentOrder = sort;
+                sm.navigation.commentSort = sort;
+                sm.navigation.commentOrder = 'date';
                 if(sort == 'desc')
                     sm.descActive = "active";
                 else
@@ -284,6 +299,7 @@
         };
 
         this.login = function(){
+
             sm.loginMsg = "";
             sm.modalHeight = "250px";
 
@@ -307,6 +323,7 @@
 
                 }else
                 {
+
                     sm.modalHeight = "300px";
                     sm.loginMsg = data.status.status_message;
                 }
@@ -322,13 +339,53 @@
             sm.password = "";
         };
 
+        this.registerFB = function(){
+
+            sm.modalLoginShown = false;
+
+            theParams = {
+                key: apiKey,
+                method: 'users.create.put',
+                fb_access: sm.fbAccessToken,
+                username: sm.fbUsername,
+                format: 'json',
+                referrer: 'deezer'
+            }
+
+            $.ajax({
+                type: "POST",
+                url: apiUrl + "?key=" + apiKey + "&method=users.create&referrer=deezer",
+                data: theParams,
+                success: function(data)
+                {
+                    if (data.status.status_code == 200) {
+                        sm.user = data.user;
+
+                        $scope.toggleModal();
+
+                    } else {
+                        sm.loginMsg = data.status.status_message;
+                        sm.modalHeight = "300px";
+
+                    }
+
+                    sm.modalLoginShown = true;
+                    sm.commentsLoaded = true;
+                }
+            });
+        }
+
         this.loginFB = function(){
             console.log("Facebook Login");
+            sm.modalLoginShown = false;
+
             $facebook.login().then(function(response) {
-                console.log(response);
+
                 if(response.status == "connected"){
                     sm.loginMsg = "";
                     sm.modalHeight = "250px";
+
+                    sm.fbAccessToken = response.authResponse.accessToken;
 
                     $http({
                         url:apiUrl,
@@ -348,10 +405,16 @@
                             $scope.toggleModal();
 
                         } else {
+                            if(data.status.status_code == 408){
+                                sm.fbRegister = true;
+                                sm.loginMsg = "The facebook user does not currently have and account.  Please select a username to register a new account."
+                            }
+                            else
+                                sm.loginMsg = data.status.status_message;
                             sm.modalHeight = "300px";
-                            sm.loginMsg = data.status.status_message;
-                        }
 
+                        }
+                        sm.modalLoginShown = true;
                         sm.commentsLoaded = true;
                     });
                 }
