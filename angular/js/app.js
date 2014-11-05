@@ -1,6 +1,6 @@
 (function(){
 
-    var app = angular.module('songmeanings',['truncate','ngFacebook'])
+    var app = angular.module('songmeanings',['truncate','ngFacebook','ngCookies'])
 
         .config( function( $facebookProvider ) {
             $facebookProvider.setAppId('219341278125724');
@@ -40,7 +40,7 @@
 
     var u = null;
 
-    app.controller('DeezerController', ['$http','$scope','$facebook', function($http, $scope, $facebook){
+    app.controller('DeezerController', ['$http','$scope','$facebook','$cookieStore', function($http, $scope, $facebook, $cookieStore){
 
         sm = this;
         this.song = {};
@@ -54,16 +54,42 @@
 
         };
 
-        this.user = u;
+        this.email = "";
         this.username = "";
         this.password = "";
+        this.repassword = "";
         this.fbUsername = "";
         this.fbRegister = false;
+        this.smRegister = false;
         this.loginMsg = "";
-        this.modalHeight = "250px";
+        this.modalHeight = "300px";
         this.modalLoginShown = true;
         this.fbAccessToken = "";
 
+        this.user = u;
+
+        this.comment = {
+            tags: "",
+            thoughts: "",
+            category: 4,
+            errorMsg: "",
+            options:[
+                {id:4, value:"General Comment"},
+                {id:5, value:"Memory"},
+                {id:6, value:"Interpretation"},
+                {id:7, value:"Song Meaning"},
+                {id:8, value:"My Opinion"},
+                {id:13, value:"Link(s)"},
+                {id:14, value:"Song Comparison"}
+            ]
+        };
+
+        tmp_usr = $cookieStore.get('user');
+        if(tmp_usr != null){
+            this.user = tmp_usr
+            this.username = tmp_usr.user_name;
+
+        }
 
         $scope.modalShown = false;
         $scope.toggleModal = function() {
@@ -71,10 +97,12 @@
                 $scope.modalShown = false;
             else
             {
+
                 sm.modalLoginShown = true;
                 sm.fbRegister = false;
+
                 sm.loginMsg = "";
-                sm.modalHeight = "250px";
+
                 $scope.modalShown = true;
             }
 
@@ -144,6 +172,7 @@
             }).success(function(data){
 
                 try {
+
                     for (var commentArray in data.comment) {
                         // api returns the JSON array a little funky
                         comment = data.comment[commentArray];
@@ -227,23 +256,64 @@
         };
 
         this.updateCommentRating = function(location, upOrDown){
+            console.log("Entering rating...");
+            console.log(sm.user);
+
+            theParams = {
+                key: apiKey,
+                method: 'comments.rate.put',
+                comment_id: Number(sm.comments[location].id),
+                sm_uid: sm.user.user_id,
+                sm_authcode: sm.user.user_authcode,
+                rating: upOrDown,
+                format: 'json',
+                referrer: 'deezer'
+            };
+
             $http({
-                url:apiUrl,
-                method: 'GET',
-                params: {
-                    key: apiKey,
-                    method: 'comments.rate.put',
-                    comment_id: Number(sm.comments[location].id),
-                    sm_uid: sm.user.user_id,
-                    sm_authcode: sm.user.user_authcode,
-                    rating: upOrDown,
-                    format: 'json',
-                    referrer: 'deezer'
+                method: 'POST',
+                url: apiUrl + "?key=" + apiKey + "&method=comments.rate.put&sm_uid=" + sm.user.user_id + "&sm_authcode=" + sm.user.user_authcode,
+                data: $.param(theParams),
+                headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+            }).success(function(data) {
+
+                if (data.status.status_code == 200) {
+                    sm.comments[location].rating = data.comment.comment_rating;
                 }
-            }).success(function(data){
-                sm.comments[location].rating = data.comment.comment_rating;
+                else
+                    alert(data.status.status_message);
             });
+
         };
+
+        this.postComment = function(){
+            sm.comment.errorMsg = "Error";
+
+            var theParams = {
+                key: apiKey,
+                method: 'comments.put',
+                sm_uid: sm.user.user_id,
+                sm_authcode: sm.user.user_authcode,
+                type: sm.comment.category,
+                sm_lid: sm.song.id,
+                format: 'json',
+                referrer: 'deezer'
+            };
+
+            $http({
+                method: 'POST',
+                url: apiUrl + "?key=" + apiKey + "&method=comments.put&sm_uid=" + sm.user.user_id + "&sm_authcode=" + sm.user.user_authcode,
+                data: $.param(theParams),
+                headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+            }).success(function(data) {
+
+                if (data.status.status_code == 200) {
+
+                }
+                else
+                    sm.comment.errorMsg = data.status.status_message;
+            });
+        }
 
         this.flagComment = function(location){
 
@@ -255,7 +325,9 @@
                 referrer: 'deezer'
             };
 
-            if(sm.user != null)
+            theUrl = apiUrl + "?key=" + apiKey + "&method=comments.flag.put";
+
+            if(sm.user != null){
                 theParams = {
                     key: apiKey,
                     method: 'comments.flag.put',
@@ -265,37 +337,23 @@
                     referrer: 'deezer'
                 };
 
+                theUrl = apiUrl + "?key=" + apiKey + "&method=comments.flag.put&sm_uid=" + sm.user.user_id + "&sm_authcode=" + sm.user.user_authcode;
+            }
 
-            /*
+
             $http({
-                url:apiUrl,
                 method: 'POST',
-                params: {
-                    key: apiKey,
-                    method: 'comments.flag.put',
-                    referrer: 'deezer'
-                },
-                data: theParams
-            }).success(function(data){
+                url: theUrl,
+                data: $.param(theParams),
+                headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+            }).success(function(data) {
 
-                sm.comments[location].flagged = true;
-
-            });
-            */
-
-
-            $.ajax({
-                type: "POST",
-                url: apiUrl + "?key=" + apiKey + "&method=comments.flag.put&referrer=deezer",
-                data: theParams,
-                success: function(data)
-                {
-                   sm.comments[location].flagged = true;
-                   console.log(data);
+                if (data.status.status_code == 200) {
+                    sm.comments[location].flagged = true;
                 }
+
             });
 
-            sm.comments[location].flagged = true;
         };
 
         this.login = function(){
@@ -318,7 +376,7 @@
 
                 if(data.status.status_code == 200){
                     sm.user = data.user;
-
+                    $cookieStore.put("user",sm.user);
                     $scope.toggleModal();
 
                 }else
@@ -337,11 +395,14 @@
             sm.user = null;
             sm.username = "";
             sm.password = "";
+            $cookieStore.remove("user");
         };
 
         this.registerFB = function(){
 
             sm.modalLoginShown = false;
+            sm.smRegister = false;
+            sm.fbRegister = true;
 
             theParams = {
                 key: apiKey,
@@ -352,27 +413,80 @@
                 referrer: 'deezer'
             }
 
-            $.ajax({
-                type: "POST",
-                url: apiUrl + "?key=" + apiKey + "&method=users.create&referrer=deezer",
-                data: theParams,
-                success: function(data)
-                {
-                    if (data.status.status_code == 200) {
-                        sm.user = data.user;
+            $http({
+                method: 'POST',
+                url: apiUrl + "?key=" + apiKey + "&method=users.create.put",
+                data: $.param(theParams),
+                headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+            }).success(function(data) {
 
-                        $scope.toggleModal();
+                if (data.status.status_code == 200) {
+                    sm.user = data.user;
+                    $cookieStore.put("user",sm.user);
+                    $scope.toggleModal();
 
-                    } else {
-                        sm.loginMsg = data.status.status_message;
-                        sm.modalHeight = "300px";
+                } else {
+                    sm.loginMsg = data.status.status_message;
+                    sm.modalHeight = "300px";
 
-                    }
-
-                    sm.modalLoginShown = true;
-                    sm.commentsLoaded = true;
                 }
+                sm.modalLoginShown = true;
             });
+
+        }
+
+        $scope.updateMsg = function(msg){
+            sm.loginMsg = msg;
+        }
+
+        this.registerSM = function(){
+            sm.modalHeight = "300px;"
+            sm.fbRegister = false;
+
+
+            if(sm.password == ""){
+                sm.loginMsg = "Passwords is invalid.";
+                return
+            }
+
+            if(sm.password != sm.repassword){
+                sm.loginMsg = "Passwords do not match.";
+                return
+            }
+
+            sm.modalLoginShown = false;
+
+            theParams = {
+                key: apiKey,
+                method: 'users.create.put',
+                username: sm.username,
+                password: sm.password,
+                email: sm.email,
+                format: 'json',
+                referrer: 'deezer'
+            }
+
+            $http({
+                method: 'POST',
+                url: apiUrl + "?key=" + apiKey + "&method=users.create.put",
+                data: $.param(theParams),
+                headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+            }).success(function(data) {
+
+                if (data.status.status_code == 200) {
+                    sm.user = data.user;
+                    $cookieStore.put("user",sm.user);
+                    $scope.toggleModal();
+
+                } else {
+                    sm.loginMsg = data.status.status_message;
+                    sm.modalHeight = "300px";
+
+                }
+                sm.modalLoginShown = true;
+            });
+
+
         }
 
         this.loginFB = function(){
@@ -401,7 +515,7 @@
 
                         if (data.status.status_code == 200) {
                             sm.user = data.user;
-
+                            $cookieStore.put("user",sm.user);
                             $scope.toggleModal();
 
                         } else {

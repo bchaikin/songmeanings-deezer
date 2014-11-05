@@ -5,7 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>SongMeanings.net</title>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular-cookies.js"></script>
     <script src="js/app.js"></script>
     <script src="js/truncate.js"></script>
     <script src="js/ngFacebook.js"></script>
@@ -30,8 +31,8 @@
 				<div class="account">
 					<a href="#" class="opener">account</a>
 					<ul>
-						<li><a href="#">Sign Up</a></li>
-						<li class="signin" ><a ng-click='toggleModal();' ng-show="deezer.user == null">Login</a><a ng-click='deezer.logout()' ng-show="deezer.user != null">Logout</a></li>
+						<li><a ng-show="deezer.user == null" ng-click="deezer.smRegister = true; toggleModal();">Sign Up</a></li>
+						<li class="signin"><a ng-click='deezer.modalHeight="300px";deezer.smRegister = false; toggleModal();' ng-show="deezer.user == null">Login</a><a ng-click='deezer.logout()' ng-show="deezer.user != null">Logout {{deezer.username}}</a></li>
 					</ul>
 				</div>
 			</div>
@@ -148,41 +149,34 @@
 								</div>
 								<form action="#" class="slide-thoughts">
 									<div class="thoughts-holder">
+
+                                        <div class="comment-error" ng-show="deezer.comment.errorMsg != ''">{{deezer.comment.errorMsg}}</div>
 										<div class="thoughts-left">
 											<div class="tag-block">
-												<textarea placeholder="Add your tags here. Separate with commas."></textarea>
+												<textarea placeholder="Add your tags here. Separate with commas." ng-model="deezer.comment.tags"></textarea>
 											</div>
 											<div class="select-holder">
-												<select title="Choose a Catagory">
-													<option>General Comment</option>
-													<option>Favorite</option>
-													<option>Memory</option>
-													<option>Interpretation</option>
-													<option>Song Meaning</option>
-													<option>My Opinion</option>
-													<option>Translation</option>
-													<option>Link(s)</option>
-													<option>Song Comparison</option>
-												</select>
+												<select title="Choose a Catagory" ng-model="deezer.comment.category" ng-options="obj.value for obj in deezer.comment.options track by obj.id"></select>
 											</div>
 										</div>
 										<div class="thoughts-right">
 											<span class="pro-photo">
-												<span data-width="32" data-height="32" data-picture data-alt="image description">
+												<!--
+                                                <span data-width="32" data-height="32" data-picture data-alt="image description">
 												<span data-width="32" data-height="32" data-src="images/thumb1.jpg" ></span>
 												<span data-width="32" data-height="32" data-src="images/thumb1-tablet.jpg" data-media="(max-width:1024px)" ></span>
 												<span data-width="32" data-height="32" data-src="images/thumb1-tablet2x.jpg" data-media="(max-width:1024px) and (-webkit-min-device-pixel-ratio:1.5), (max-width:1024px) and (min-resolution:144dpi)" ></span>
 												<span data-width="32" data-height="32" data-src="images/thumb1-tablet.jpg" data-media="(max-width:767px)" ></span>
 												<span data-width="32" data-height="32" data-src="images/thumb1-tablet2x.jpg" data-media="(max-width:767px) and (-webkit-min-device-pixel-ratio:1.5), (max-width:767px) and (min-resolution:144dpi)" ></span>
 												<!--[if (lt IE 9) & (!IEMobile)]>
-													<span data-src="images/thumb1.jpg"></span>
+													<!--<span data-src="images/thumb1.jpg"></span>
 												<![endif]-->
 												<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
-												<noscript><img src="images/thumb1.jpg" width="32" height="32" alt="image description" ></noscript>
+												<!-- <noscript><img src="images/thumb1.jpg" width="32" height="32" alt="image description" ></noscript> -->
 											</span>
 											</span>
-											<textarea placeholder="Add your thoughts here..."></textarea>
-											<input class="button" type="submit" value="Post">
+											<textarea placeholder="Add your thoughts here..." ng-model="deezer.comment.thoughts"></textarea>
+											<input class="button" type="button" value="Post" ng-click="deezer.postComment()">
 										</div>
 									</div>
 								</form>
@@ -203,7 +197,8 @@
 									<strong class="title"><a href="{{comment.userUrl}}" target="_blank">{{comment.user}}</a></strong>
 									<time class="date">{{comment.date | date : format : timezone}}</time>
 									<div class="links">
-										<a href="#">{{comment.replies}} Replies</a> <span class="leave-reply">| <a href="#">Leave Your Reply</a></span>
+										<a href="#">{{comment.replies}} Replies</a>
+                                        <!---<span class="leave-reply"> | <a href="#">Leave Your Reply</a></span>--->
 									</div>
 								</footer>
 								<div class="sub-title">
@@ -269,7 +264,7 @@
             </div>
             <div class="login-info" ng-show="deezer.modalLoginShown">
                 <div class="login-error" ng-show="deezer.loginMsg != ''">{{deezer.loginMsg}}</div>
-                <dl ng-show="deezer.fbRegister == false">
+                <dl ng-show="deezer.fbRegister == false && deezer.smRegister == false">
                     <dt>Username:</dt>
                     <dd><input ng-model="deezer.username"></dd>
                     <dt>Password:</dt>
@@ -277,11 +272,23 @@
                     <dt></dt>
                     <dd class="ng-binding"><button class="button login" ng-click="deezer.login();">Login</button></dd>
                 </dl>
-                <dl ng-show="deezer.fbRegister == true">
+                <dl ng-show="deezer.fbRegister == true && deezer.smRegister == false">
                     <dt>Username:</dt>
                     <dd><input ng-model="deezer.fbUsername"></dd>
                     <dt></dt>
                     <dd class="ng-binding"><button class="button login" ng-click="deezer.registerFB();">Register</button></dd>
+                </dl>
+                <dl ng-show="deezer.smRegister">
+                    <dt>Email:</dt>
+                    <dd><input ng-model="deezer.email"></dd>
+                    <dt>Username:</dt>
+                    <dd><input ng-model="deezer.username"></dd>
+                    <dt>Password:</dt>
+                    <dd class="ng-binding"><input ng-model="deezer.password" type="password"></dd>
+                    <dt>Re-Enter Password:</dt>
+                    <dd class="ng-binding"><input ng-model="deezer.repassword" type="password"></dd>
+                    <dt></dt>
+                    <dd class="ng-binding"><button class="button login" ng-click="deezer.registerSM();">Register</button></dd>
                 </dl>
 
 
@@ -289,7 +296,7 @@
         </div>
             <div class="fblogin-info" ng-show="deezer.fbRegister == false">
 
-                    <button class="button" ng-click="deezer.loginFB();"><i class="fa fa-facebook-square fa-2"></i> Facebook Login</button>
+                    <button class="button" ng-click="deezer.smRegister=false; fbRegister=true; deezer.loginFB();"><i class="fa fa-facebook-square fa-2"></i> Facebook Login</button>
 
             </div>
         </form>
