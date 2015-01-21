@@ -32,12 +32,16 @@
     //var apiUrl = "https://api.songmeanings.com/1/";
     var apiKey = "bk9HMIsveyMZZyNROxxf";
 
+    /*
     var deezerData = {
         artist: 'Radiohead',
         album: 'Pablo Honey',
         title: 'Creep'
 
     };
+    */
+
+    var deezerData = {}
 
     var u = null;
 
@@ -71,6 +75,7 @@
         this.isFavorite = false;
         this.previousNavigation = {};
         this.currentComment = {};
+        this.previousComments = [];
 
         this.user = u;
 
@@ -305,6 +310,7 @@
 
         this.showCommentReplies = function(comment_pos, open_form){
 
+            sm.previousComments = sm.comments;
             sm.inReplyMode = true;
             sm.currentComment = sm.comments[comment_pos];
 
@@ -459,6 +465,44 @@
             });
         }
 
+        this.postReply = function(){
+            sm.comment.errorMsg = "";
+
+            var theParams = {
+                key: apiKey,
+                method: 'comments.put',
+                sm_uid: sm.user.user_id,
+                sm_authcode: sm.user.user_authcode,
+                type: sm.comment.category,
+                sm_lid: sm.song.id,
+                parent_id: sm.currentComment.id,
+                comment: sm.comment.thoughts,
+                format: 'json',
+                referrer: 'deezer'
+            };
+
+            $http({
+                method: 'POST',
+                url: apiUrl + "?key=" + apiKey + "&method=comments.put&sm_uid=" + sm.user.user_id + "&sm_authcode=" + sm.user.user_authcode,
+                data: $.param(theParams),
+                headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+            }).success(function(data) {
+
+                if (data.status.status_code == 200) {
+
+                    $(".thoughts-opener").click();
+                    sm.navigation.commentOrder = "date";
+                    sm.navigation.commentSort = "desc";
+                    console.log(sm.previousComments);
+                    console.log(sm.previousComments.indexOf(sm.currentComment));
+                    sm.comments = sm.previousComments;
+                    sm.updateComments(sm.previousComments.indexOf(sm.currentComment));
+
+                }
+                else
+                    sm.comment.errorMsg = data.status.status_message;
+            });
+        }
         this.followArtist = function(){
 
             var theParams = {

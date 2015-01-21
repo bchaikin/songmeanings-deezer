@@ -186,7 +186,7 @@
 											</span>
 											</span>
 											<textarea placeholder="Add your thoughts here..." ng-model="deezer.comment.thoughts"></textarea>
-											<input class="button" type="button" value="Post" ng-click="deezer.postComment()">
+											<input class="button" type="button" value="Post" ng-click="deezer.postReply()">
 										</div>
 									</div>
 								</form>
@@ -219,7 +219,7 @@
 											</span>
                                             </span>
                                             <textarea placeholder="Add your thoughts here..." ng-model="deezer.comment.thoughts"></textarea>
-                                            <input class="button" type="button" value="Post" ng-click="deezer.postComment()">
+                                            <input class="button" type="button" value="Post" ng-click="deezer.postReply()">
                                         </div>
                                     </div>
                                 </form>
@@ -241,7 +241,7 @@
                     <div class="comments-display-text"  ng-show="deezer.commentsLoaded && deezer.hasComments">Displaying Page {{deezer.navigation.pageCurrent}} of {{deezer.navigation.pageTotal}}<a name="comments-display-text"></a></div>
 
                     <div class="comments-list">
-                        <article id="reply" class="comments-item reply" ng-show="deezer.inReplyMode == true">
+                        <article id="reply" class="comments-item reply" ng-show="deezer.inReplyMode == true && deezer.commentsLoaded">
                             <div class="add-info">
                                 <footer>
                                     <strong class="title"><a href="{{deezer.currentComment.userUrl}}" target="_blank">{{deezer.currentComment.user}}</a></strong>
@@ -382,7 +382,7 @@
     height: {{deezer.modalHeight}}
 
     <script>
-/*
+
         $(document).ready(function(){
 
             var scope = angular.element(document.getElementById("deezer-controller")).scope();
@@ -406,6 +406,7 @@
                                 scope.updateSong(deezerData);
                             });
 
+
                         });
                     }
                 }
@@ -428,7 +429,7 @@
 
 
         });
-        */
+
     </script>
 
 </body>
