@@ -36,7 +36,10 @@ angular.module('truncate', [])
         };
     }).filter('newlines', function () {
         return function(text) {
-            return text.replace(/\n/g, '<br/>');
+            if(text != null)
+                return text.replace(/\n/g, '<br/>');
+            else
+                return text;
         }
     }).filter('unsafe', function($sce) {
 

@@ -498,6 +498,12 @@ textarea:-ms-input-placeholder {color: #a1a1a1;}
 	background: #0888dd;
 	text-decoration: none;
 }
+
+.meta-block .btn-add:active{background: #003861;}
+
+button:active{background: #003861;}
+
+
 .scrollable-area{
 	height: 458px;
 	width: 100%;
@@ -576,6 +582,7 @@ textarea:-ms-input-placeholder {color: #a1a1a1;}
 	top: 8px;
 }
 .action a:hover{background: #0071bc;}
+.action a:active{background: #003861;}
 .comments-list .add-info{
 	float: right;
 	width: 858px;
@@ -1363,7 +1370,27 @@ textarea:-ms-input-placeholder {color: #a1a1a1;}
 	.follow-block a.link-follow.active:before{
 		background: url(../images/sprite-tablet@2x.png) no-repeat;
 		background-size: 176px 129px;
+
 	}
+
+    .info-list .link-holder a:hover:after,
+    .follow-block a.link-follow:hover:before{
+        background: url(../images/sprite-tablet@2x.png) no-repeat;
+        background-size: 176px 129px;
+        background-position-x: -112px;
+
+    }
+
+    .info-list .link-holder a.active:after,
+    .follow-block a.link-follow.active:before{
+        background: url(../images/sprite-tablet@2x.png) no-repeat;
+        background-size: 176px 129px;
+        background-position-x: -112px;
+
+    }
+
+
+
 	.add-info .sub-title .link-flag{
 		background-position:-83px -1px
 	}
@@ -1540,4 +1567,33 @@ a[ng-click] {
     -moz-box-shadow: 0 1px 5px rgba(0,0,0,.12);
     -webkit-box-shadow: 0 1px 5px rgba(0,0,0,.12);
     box-shadow: 0 1px 5px rgba(0,0,0,.12);
+}
+
+.no-comments .comments-list .comments-item{
+    text-align: center;
+    margin: 0;
+}
+
+.no-comments .comments-list{
+    padding: 0;
+}
+
+.no-lyrics{
+    text-align: center;
+}
+
+.album-info{
+    min-height:88px;
+}
+
+#reply-holder .orange {
+    background-color: #ea8216;
+    margin-right: 10px;
+}
+#reply-holder .orange:hover{background: #fb8c19;}
+
+.comments-item#reply{
+    border: 2px #0888dd solid;
+
+
 }
